@@ -312,20 +312,20 @@ export default function App() {
 
   useEffect(() => { fetchAnalytics(); }, []);
 
-  const fetchAnalytics = async () => {
-    try {
-      const res = await fetch("http://localhost:8000/analytics/top");
-      const data = await res.json();
-      setAnalytics(data);
-    } catch {}
-  };
+const fetchAnalytics = async () => {
+  try {
+    const res = await fetch("https://snaplink-xn19.onrender.com/analytics/top");
+    const data = await res.json();
+    setAnalytics(data);
+  } catch {}
+};
 
   const handleShorten = async () => {
     if (!url) return setError("Please enter a URL");
     setError("");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:8000/shorten", {
+      const res = await fetch("https://snaplink-xn19.onrender.com/shorten", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
