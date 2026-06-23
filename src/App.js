@@ -354,7 +354,7 @@ export default function App() {
         </nav>
 
         <div className="hero">
-          <h1>Shorten URLs.<br /><em>At Scale.</em></h1>
+          <h1>Shorten URLs.<br /><em>at scale</em></h1>
           <p>Distributed. Cached. Fault-tolerant.</p>
         </div>
 
